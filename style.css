@@ -1,0 +1,136 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  width: 100%;
+  height: 100vh;
+}
+
+ul {
+  list-style: none;
+  padding-left: 10px;
+  margin-top: 5px;
+  font-size: 20px;
+}
+
+.nav {
+  display: flex;
+  height: 5%;
+  width: 100%;
+  background-color: lightgrey;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.left {
+  display: flex;
+  width: 30%;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.circle {
+  border: 1px solid grey;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  margin-left: 10px;
+}
+
+.center {
+  display: flex;
+  width: 40%;
+  justify-content: center;
+  align-items: center;
+}
+
+.rect {
+  border: 1px solid grey;
+  border-radius: 5px;
+  width: 100%;
+  height: 20px;
+}
+
+.right {
+  display: flex;
+  width: 30%;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.black {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  background-color: black;
+  color: white;
+  justify-content: left;
+}
+
+.blue {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  background-color: #6c01ff;
+}
+
+.red {
+  grid-column: 1 / 2;
+  grid-row: 2 / 4;
+  background-color: red;
+}
+
+.white {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+  background-color: white;
+}
+
+.yellow {
+  grid-column: 2 / 3;
+  grid-row: 3 / 4;
+  background-color: #ffc904;
+}
+
+.speakers {
+  display: grid;
+  grid-column: 3 / 4;
+  grid-row: 1 / -1;
+  background-color: aliceblue;
+  padding-left: 10px;
+  grid-template-rows: repeat(auto-fill, minmax(min-content, 1fr));
+}
+
+.artists {
+  display: grid;
+  grid-column: 4 / 5;
+  grid-row: 1 / -1;
+  background-color: rgb(255, 240, 252);
+  padding-left: 10px;
+  grid-template-rows: repeat(auto-fill, minmax(min-content, 1fr));
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  font-size: 10px;
+  font-weight: bold;
+}
+
+.speakers div:not(:first-of-type),
+.artists div:not(:first-of-type) {
+  font-size: 15px;
+}
+
+.speakers div:nth-child(6) span {
+  background-color: #6c01ff;
+}
+
+.ud {
+  display: inline-block;
+  transform-origin: 50% 55%;
+  transform: rotateX(180deg);
+}
